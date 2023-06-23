@@ -1,0 +1,15 @@
+C:\ZooSim\bin\Debug\net7.0\ZooSim.exe
+C:\ZooSim\bin\Debug\net7.0\ZooSim.deps.json
+C:\ZooSim\bin\Debug\net7.0\ZooSim.runtimeconfig.json
+C:\ZooSim\bin\Debug\net7.0\ZooSim.dll
+C:\ZooSim\bin\Debug\net7.0\ZooSim.pdb
+C:\ZooSim\obj\Debug\net7.0\ZooSim.csproj.AssemblyReference.cache
+C:\ZooSim\obj\Debug\net7.0\ZooSim.GeneratedMSBuildEditorConfig.editorconfig
+C:\ZooSim\obj\Debug\net7.0\ZooSim.AssemblyInfoInputs.cache
+C:\ZooSim\obj\Debug\net7.0\ZooSim.AssemblyInfo.cs
+C:\ZooSim\obj\Debug\net7.0\ZooSim.csproj.CoreCompileInputs.cache
+C:\ZooSim\obj\Debug\net7.0\ZooSim.dll
+C:\ZooSim\obj\Debug\net7.0\refint\ZooSim.dll
+C:\ZooSim\obj\Debug\net7.0\ZooSim.pdb
+C:\ZooSim\obj\Debug\net7.0\ZooSim.genruntimeconfig.cache
+C:\ZooSim\obj\Debug\net7.0\ref\ZooSim.dll
