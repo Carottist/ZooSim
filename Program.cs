@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Data.SqlTypes;
 
 class Program
 {
+    //list here
+    List<int> ints = new List<int>();
+    List<string> strings = new List<string>();
+
     static void Main(string[] args)
     {
         Zoo zoo = new Zoo();
         Console.WriteLine("Добро пожаловать!");
+        zoo.EarnMoney(19500);
         Control.MainZooControl(zoo);
     }
 }

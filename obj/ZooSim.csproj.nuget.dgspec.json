@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\ZooSim\\ZooSim.csproj": {}
+    "C:\\ZooSim\\ZooSim.csproj": {}
   },
   "projects": {
-    "c:\\ZooSim\\ZooSim.csproj": {
+    "C:\\ZooSim\\ZooSim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\ZooSim\\ZooSim.csproj",
+        "projectUniqueName": "C:\\ZooSim\\ZooSim.csproj",
         "projectName": "ZooSim",
-        "projectPath": "c:\\ZooSim\\ZooSim.csproj",
+        "projectPath": "C:\\ZooSim\\ZooSim.csproj",
         "packagesPath": "C:\\Users\\morkva\\.nuget\\packages\\",
-        "outputPath": "c:\\ZooSim\\obj\\",
+        "outputPath": "C:\\ZooSim\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\morkva\\AppData\\Roaming\\NuGet\\NuGet.Config"

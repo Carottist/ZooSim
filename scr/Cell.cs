@@ -7,7 +7,7 @@ using System.Linq;
 /// </summary>
 public class Cell
 {
-    private List<Animal> _animals; // list of animals in the cell
+    private List<ICellContainment> _cellContainment; // list of animals in the cell
 
     //id field and property
     private int _id;
@@ -18,9 +18,39 @@ public class Cell
     }
 
     //property to get the list of animals
+    //get all animals in the cell containment list
     public List<Animal> Animals
     {
-        get { return _animals; }
+        get
+        {
+            List<Animal> animals = new();
+            foreach (ICellContainment cellContainment in _cellContainment)
+            {
+                if (cellContainment is Animal animal)
+                {
+                    animals.Add(animal);
+                }
+            }
+            return animals;
+        }
+    }
+
+    //property to get the list of improvements
+    //get all improvements in the cell containment list
+    public List<Improvement> Improvements
+    {
+        get
+        {
+            List<Improvement> improvements = new();
+            foreach (ICellContainment cellContainment in _cellContainment)
+            {
+                if (cellContainment is Improvement improvement)
+                {
+                    improvements.Add(improvement);
+                }
+            }
+            return improvements;
+        }
     }
 
     //capacity field and property
@@ -37,20 +67,41 @@ public class Cell
     {
         _id = id;
         _capacity = capacity;
-        _animals = new List<Animal>();
     }
 
     public void AddAnimal(Animal animal)
     {
         if(animal.Size <= GetFreeSpace())
         {
-        _animals.Add(animal);
+        _cellContainment.Add(animal);
         }
+    }
+
+    public void AddImprovement(Improvement improvement)
+    {
+        //check if the improvement size is less than the free space
+        if (improvement.Size > GetFreeSpace())
+        {
+            //log in console
+            Console.WriteLine("Improvement size is too big for the cell");
+            return;
+        }
+
+        //check if the improvement with the similar name is already in the cell
+        if (Improvements.Any(imp => imp.Name == improvement.Name))
+        {
+            //log in console
+            Console.WriteLine("Improvement with the same name is already in the cell");
+            return;
+        }
+
+        //add improvement to the cell
+        Improvements.Add(improvement);
     }
 
     public void RemoveAnimal(Animal animal)
     {
-        _animals.Remove(animal);
+        _cellContainment.Remove(animal);
     }
 
     /*
@@ -62,11 +113,11 @@ public class Cell
     public int GetFreeSpace()
     {
         int occupiedSpace = 0;
-        foreach (Animal animal in _animals)
+
+        //for each ISize in both animals and improvements, add the size to the occupiedSpace
+        foreach (ISize size in _cellContainment)
         {
-            //long way to do the same thing:
-            //occupiedSpace = occupiedSpace + animal.Size;
-            occupiedSpace += animal.Size;
+            occupiedSpace += size.Size;
         }
 
         return Capacity - occupiedSpace; 
@@ -75,10 +126,10 @@ public class Cell
     public void RelocateAnimalToUndistributedList(Animal animal, Zoo zoo)
     {
         //check if animal is in the cell
-        if (_animals.Contains(animal))
+        if (_cellContainment.Contains(animal))
         {
             //remove animal from the cell
-            _animals.Remove(animal);
+            _cellContainment.Remove(animal);
             //add animal to the undistributed list
             zoo.AddAnimalToZooUndistributedList(animal);
         }

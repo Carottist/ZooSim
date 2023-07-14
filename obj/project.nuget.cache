@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2XhqAnL24oxUHeW7ciMYKO9zeC2CbHEVOxos0nNIqeAK7523xSmkN1L6Jutxyc8luLj0cIJkAV59PHGbsu/IEw==",
+  "dgSpecHash": "Kp7DHk8r5oIL0FPNCsChqweUjDXL+rAENqf0itR9H/vi7lC+BUOEHlhukFSHosidwhxClVSOzNFRW2CsclKoow==",
   "success": true,
-  "projectFilePath": "c:\\ZooSim\\ZooSim.csproj",
+  "projectFilePath": "C:\\ZooSim\\ZooSim.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

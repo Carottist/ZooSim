@@ -1,4 +1,4 @@
-public abstract class Animal
+public abstract class Animal : ISize, ICellContainment
 {
     private string _name;
 

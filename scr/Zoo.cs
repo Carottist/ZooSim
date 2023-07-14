@@ -4,6 +4,9 @@ using System.Linq;
 
 public class Zoo
 {
+    //amount of money we have
+    private int _money = 100;
+
     //list of cells
     private List<Cell> _cells;
 
@@ -19,6 +22,12 @@ public class Zoo
     {
         get { return _cells; }
     }
+
+    public int Money
+    {
+        get {return _money; }
+    }
+
     //build new cell with certain capacity
     public Cell BuildCell(int width, int height)
     {
@@ -115,4 +124,5 @@ public class Zoo
         }
         return _cells.Find(x => x.Id == id);
     }
+
 }
